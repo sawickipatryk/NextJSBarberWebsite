@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry'
+import NavBar from '@/components/NavBar'
 
 export const metadata: Metadata = {
   title: 'Website',
@@ -15,6 +16,7 @@ export const RootLayout = ({ children }: { children: React.ReactNode }): React.J
       <body>
         <AppRouterCacheProvider>
           <ThemeRegistry>
+            <NavBar/>
             {children}
           </ThemeRegistry>
         </AppRouterCacheProvider>
