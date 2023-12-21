@@ -64,6 +64,9 @@ const theme = createTheme({
     h4: {
       fontSize: '32px'
     },
+    h5: {
+      fontSize: '20px'
+    },
     body1: {
       fontSize: '17px'
     },
