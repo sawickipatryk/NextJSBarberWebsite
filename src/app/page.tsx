@@ -4,6 +4,7 @@ import Hero from '@/components/Hero'
 import bgc from './backgroundHeader.jpg'
 import OpeningOurs from '@/components/OpeningOurs'
 import PriceList from '@/components/PriceList'
+import OurServices from '@/components/OurServices'
 
 export const Home = (): React.JSX.Element => {
   return (
@@ -33,6 +34,7 @@ export const Home = (): React.JSX.Element => {
       />
       <OpeningOurs/>
       <PriceList/>
+      <OurServices/>
     </>
   )
 }

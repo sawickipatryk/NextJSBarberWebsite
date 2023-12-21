@@ -42,12 +42,12 @@ const pricesListArray = [
     price: '20'
   },
   {
-    id: 6,
+    id: 7,
     name: 'BEARD',
     price: '20'
   },
   {
-    id: 6,
+    id: 8,
     name: 'BEARD',
     price: '20'
   }

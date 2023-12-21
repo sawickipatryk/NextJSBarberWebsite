@@ -5,10 +5,6 @@ import theme from '../ThemeRegistry/theme'
 
 interface openingOursProps {
   sx?: object
-  sxGradient?: object
-  header?: string
-  text?: string
-  buttonText?: string
 }
 
 const openingHoursArray = [
