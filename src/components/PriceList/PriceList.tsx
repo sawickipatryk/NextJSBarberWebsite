@@ -87,7 +87,11 @@ export const PriceList = (props: openingOursProps): React.JSX.Element => {
         maxWidth={'lg'}
         sx={{
           paddingTop: '40px',
-          paddingBottom: '40px'
+          paddingBottom: '40px',
+          [theme.breakpoints.up('md')]: {
+            paddingTop: '80px',
+            paddingBottom: '80px'
+          }
         }}
       >
 
@@ -145,7 +149,16 @@ export const PriceList = (props: openingOursProps): React.JSX.Element => {
         </Container>
         <Grid
           container
-          spacing={2}
+          gap={'30px'}
+          sx={{
+            [theme.breakpoints.up('md')]: {
+              '& .MuiGrid-root': {
+                flexBasis: '47%',
+                margin: 'auto'
+              }
+            }
+
+          }}
         >
           {
             pricesListArray.map((item) => {
@@ -155,6 +168,9 @@ export const PriceList = (props: openingOursProps): React.JSX.Element => {
                   item
                   xs={12}
                   md={6}
+                  sx={{
+                    borderBottom: '1px solid #A27B5C'
+                  }}
                 >
                   <Box
                     sx={{

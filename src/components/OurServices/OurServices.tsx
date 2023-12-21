@@ -32,7 +32,11 @@ export const OurServices = (props: ourServicesProps): React.JSX.Element => {
         maxWidth={'lg'}
         sx={{
           paddingTop: '40px',
-          paddingBottom: '40px'
+          paddingBottom: '40px',
+          [theme.breakpoints.up('md')]: {
+            paddingTop: '80px',
+            paddingBottom: '80px'
+          }
         }}
       >
         <Typography

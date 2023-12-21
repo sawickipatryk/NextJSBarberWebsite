@@ -49,15 +49,20 @@ export const OpeningOurs = (props: openingOursProps): React.JSX.Element => {
     >
       <Container
         maxWidth={'lg'}
+        sx={{
+          paddingTop: '40px',
+          paddingBottom: '40px',
+          [theme.breakpoints.up('md')]: {
+            paddingTop: '80px',
+            paddingBottom: '80px'
+          }
+        }}
       >
         <Typography
           sx={{
             textAlign: 'center',
             textTransform: 'uppercase',
-            marginBottom: '30px',
-            [theme.breakpoints.up('md')]: {
-              marginBottom: '60px'
-            }
+            marginBottom: '60px'
           }}
           variant={'h2'}
           fontWeight={theme.typography.fontWeightBold}
@@ -73,7 +78,7 @@ export const OpeningOurs = (props: openingOursProps): React.JSX.Element => {
         </Typography>
         <Grid
           container
-          spacing={5}
+          spacing={'30px'}
         >
           <Grid
             item
@@ -108,7 +113,8 @@ export const OpeningOurs = (props: openingOursProps): React.JSX.Element => {
                 fontWeight={theme.typography.fontWeightBold}
                 sx={{
                   textAlign: 'center',
-                  marginBottom: '10px'
+                  marginBottom: '10px',
+                  padding: '10px 10px'
                 }}
               >
                 OPENING HOURS

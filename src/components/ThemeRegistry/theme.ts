@@ -68,10 +68,10 @@ const theme = createTheme({
       fontSize: '20px'
     },
     body1: {
-      fontSize: '17px'
+      fontSize: '18px'
     },
     body2: {
-      fontSize: '16px'
+      fontSize: '17px'
     },
     button: {
       fontSize: '16px'
