@@ -5,6 +5,7 @@ import bgc from './backgroundHeader.jpg'
 import OpeningOurs from '@/components/OpeningOurs'
 import PriceList from '@/components/PriceList'
 import OurServices from '@/components/OurServices'
+import Photos from '@/components/Photos'
 
 export const Home = (): React.JSX.Element => {
   return (
@@ -35,6 +36,7 @@ export const Home = (): React.JSX.Element => {
       <OpeningOurs/>
       <PriceList/>
       <OurServices/>
+      <Photos/>
     </>
   )
 }
