@@ -129,7 +129,10 @@ export const PriceList = (props: openingOursProps): React.JSX.Element => {
                     fontSize: '14px',
                     padding: '0px',
                     minWidth: '0px',
-                    color: 'white'
+                    color: 'white',
+                    [theme.breakpoints.up('md')]: {
+                      fontSize: '18px'
+                    }
                   }}
                   variant={'text'}
                   key={button.buttonName}
