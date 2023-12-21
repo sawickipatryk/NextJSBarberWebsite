@@ -12,6 +12,7 @@ import Button from '@mui/material/Button'
 
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
+import theme from '../ThemeRegistry/theme'
 
 const pages = ['Products', 'Pricing', 'Blog']
 
@@ -111,8 +112,10 @@ function ResponsiveAppBar (): React.JSX.Element {
               sx={{
                 display: { xs: 'block', md: 'none' },
                 '& .MuiMenu-paper': {
-                  width: '100%'
+                  width: '100%',
+                  color: theme.palette.common.black
                 }
+
               }}
             >
               {pages.map((page) => (

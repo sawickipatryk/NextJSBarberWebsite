@@ -1,5 +1,6 @@
+'use client'
 import { Roboto } from 'next/font/google'
-import { createTheme } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 
 // declare module '@mui/material/styles' {
 //   interface Theme {
@@ -34,8 +35,8 @@ const theme = createTheme({
       main: '#fff'
     },
     text: {
-      primary: 'rgba(0, 0, 0, 1)',
-      secondary: 'rgba(0, 0, 0, 0.5)',
+      primary: 'rgba(255, 255, 255, 1)',
+      secondary: '#DCD7C9',
       disabled: 'rgba(0, 0, 0, 0.1)'
     },
     background: {
@@ -47,8 +48,33 @@ const theme = createTheme({
     borderRadius: 10
   },
   typography: {
+    fontWeightBold: '700',
+    fontWeightMedium: '500',
+    fontWeightRegular: '400',
+    fontWeightLight: '300',
+    h1: {
+      fontSize: '48px'
+    },
+    h2: {
+      fontSize: '42px'
+    },
+    h3: {
+      fontSize: '38px'
+    },
+    h4: {
+      fontSize: '32px'
+    },
+    body1: {
+      fontSize: '17px'
+    },
+    body2: {
+      fontSize: '16px'
+    },
+    button: {
+      fontSize: '16px'
+    },
     fontFamily: roboto.style.fontFamily
   }
 })
 
-export default theme
+export default responsiveFontSizes(theme)
