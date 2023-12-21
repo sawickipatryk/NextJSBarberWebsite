@@ -2,6 +2,7 @@
 import React from 'react'
 import Hero from '@/components/Hero'
 import bgc from './backgroundHeader.jpg'
+import OpeningOurs from '@/components/OpeningOurs'
 
 export const Home = (): React.JSX.Element => {
   return (
@@ -29,7 +30,7 @@ export const Home = (): React.JSX.Element => {
         text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur natus eveniet nulla repellendus quidem quisquam recusandae sint deserunt incidunt voluptatum.'}
         buttonText={'APPOINTMENT'}
       />
-
+      <OpeningOurs/>
     </>
   )
 }

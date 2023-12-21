@@ -45,7 +45,7 @@ const theme = createTheme({
     }
   },
   shape: {
-    borderRadius: 10
+    borderRadius: 4
   },
   typography: {
     fontWeightBold: '700',
