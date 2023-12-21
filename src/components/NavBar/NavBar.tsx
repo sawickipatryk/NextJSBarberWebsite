@@ -34,7 +34,8 @@ function ResponsiveAppBar (): React.JSX.Element {
           <Box
             sx={{
               display: { xs: 'none', md: 'flex' },
-              flexGrow: 1
+              flexGrow: 1,
+              alignItems: 'center'
             }}
           >
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
