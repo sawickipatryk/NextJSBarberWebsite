@@ -28,27 +28,61 @@ function ResponsiveAppBar (): React.JSX.Element {
 
   return (
     <AppBar position={'static'}>
-      <Container maxWidth={'xl'}>
+      <Container maxWidth={'lg'}>
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant={'h6'}
-            noWrap
-            component={'a'}
-            href={'/'}
+
+          <Box
             sx={{
-              mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none'
+              flexGrow: 1
             }}
           >
-            LOGO
-          </Typography>
+            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <Typography
+              variant={'h6'}
+              noWrap
+              component={'a'}
+              href={'/'}
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none'
+              }}
+            >
+              LOGO
+            </Typography>
+          </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                variant={'text'}
+                key={page}
+                href={page.toLocaleLowerCase()}
+                onClick={handleCloseNavMenu}
+                color={'secondary'}
+                sx={{
+                  padding: '20px 40px',
+                  display: 'block',
+                  '&:hover': {
+                    color: 'black'
+                  }
+                }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+
+          <Box
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1
+            }}
+          >
             <IconButton
               size={'large'}
               aria-label={'account of current user'}
@@ -78,7 +112,6 @@ function ResponsiveAppBar (): React.JSX.Element {
                 '& .MuiMenu-paper': {
                   width: '100%'
                 }
-
               }}
             >
               {pages.map((page) => (
@@ -93,36 +126,31 @@ function ResponsiveAppBar (): React.JSX.Element {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant={'h5'}
-            noWrap
-            component={'a'}
-            href={'/'}
+          <Box
             sx={{
-              mr: 2,
               display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none'
+              flexGrow: 1
             }}
           >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                href={page.toLocaleLowerCase()}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <Typography
+              variant={'h5'}
+              noWrap
+              component={'a'}
+              href={'/'}
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', md: 'none' },
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none'
+              }}
+            >
+              LOGO
+            </Typography>
           </Box>
+
         </Toolbar>
       </Container>
     </AppBar>
