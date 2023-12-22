@@ -2,9 +2,9 @@
 import React from 'react'
 import Hero from '@/components/Hero'
 import aboutBgcImage from './backgroundHeader.jpg'
-import NewStyle from '@/components/NewStyle'
+import ImageMasonry from '@/components/ImageMasonry'
 
-export const About = (): React.JSX.Element => {
+export const Gallery = (): React.JSX.Element => {
   return (
     <>
       <Hero
@@ -30,11 +30,11 @@ export const About = (): React.JSX.Element => {
         sxH1={{
           textAlign: 'center'
         }}
-        header={'ABOUT'}
+        header={'GALLERY'}
       />
-      <NewStyle/>
+      <ImageMasonry/>
     </>
   )
 }
 
-export default About
+export default Gallery
