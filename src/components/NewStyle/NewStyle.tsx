@@ -17,13 +17,20 @@ export const NewStyle = (props: newStyleProps): JSX.Element => {
   return (
     <Box
       sx={{
-        ...sx,
-        padding: '30px 0px'
+        ...sx
       }}
       {...otherProps}
     >
       <Container
         maxWidth={'lg'}
+        sx={{
+          paddingTop: '40px',
+          paddingBottom: '40px',
+          [theme.breakpoints.up('md')]: {
+            paddingTop: '80px',
+            paddingBottom: '80px'
+          }
+        }}
       >
         <Typography
           sx={{

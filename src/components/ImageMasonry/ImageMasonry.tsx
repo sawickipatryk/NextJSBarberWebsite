@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
-import Masonry from '@mui/lab/Masonry'
-import { Container } from '@mui/material'
+import { Container, ImageList, ImageListItem } from '@mui/material'
 import useBreakpoint from '@/helpers/useBreakpoint'
 import Image from 'next/image'
 
@@ -24,6 +23,7 @@ export const ImageMasonry = (): React.JSX.Element => {
     lg: 3,
     xl: 3
   }[breakpoint[0]]
+
   return (
     <Container>
       <Box
@@ -33,33 +33,33 @@ export const ImageMasonry = (): React.JSX.Element => {
           padding: '40px 0px'
         }}
       >
-        <Masonry
-          columns={cols}
-          spacing={2}
+        <ImageList
+          variant={'masonry'}
+          cols={cols}
+          gap={16}
         >
-          {itemData.map((item, index) => (
-            <Box
-              key={index}
+          {itemData.map((item) => (
+            <ImageListItem
               sx={{
+                display: 'flex',
                 border: '10px solid #fff',
-                boxShadow: '0px 0px 10px #111',
-                height: item.height
+                boxShadow: '0px 0px 10px #111'
               }}
-
+              key={item.id}
             >
               <Image
                 style={{
                   width: '100%',
                   objectFit: 'cover',
-                  height: '100%'
+                  height: item.height
                 }}
                 priority={true}
                 src={item.img}
                 alt={'picture of author'}
               />
-            </Box>
+            </ImageListItem>
           ))}
-        </Masonry>
+        </ImageList>
       </Box>
     </Container>
   )
@@ -68,48 +68,57 @@ export default ImageMasonry
 
 const itemData = [
   {
+    id: 1,
     img: galleryImg,
-    height: 620,
+    height: 600,
     title: 'barber'
   },
   {
+    id: 2,
     img: galleryImg1,
-    height: 300,
+    height: 280,
     title: 'barber'
   },
   {
+    id: 3,
     img: galleryImg2,
-    height: 620,
+    height: 280,
     title: 'barber'
   },
   {
+    id: 4,
     img: galleryImg3,
-    height: 620,
+    height: 280,
     title: 'barber'
   },
   {
+    id: 5,
     img: galleryImg4,
-    height: 300,
+    height: 600,
     title: 'barber'
   },
   {
+    id: 6,
     img: galleryImg5,
-    height: 300,
+    height: 280,
     title: 'barber'
   },
   {
+    id: 7,
     img: galleryImg6,
-    height: 300,
+    height: 600,
     title: 'barber'
   },
   {
+    id: 8,
     img: galleryImg7,
-    height: 300,
+    height: 280,
     title: 'barber'
   },
   {
+    id: 9,
     img: galleryImg8,
-    height: 300,
+    height: 280,
     title: 'barber'
   }
 
