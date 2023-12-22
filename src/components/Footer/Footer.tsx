@@ -1,7 +1,10 @@
 'use client'
 import React from 'react'
-import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Link, MenuItem, Typography } from '@mui/material'
 import theme from '../ThemeRegistry/theme'
+import SvgFb from './SvgFb'
+import SvgIn from './SvgIn'
+import SvgX from './SvgX'
 
 interface footerProps {
   sx?: object
@@ -44,7 +47,45 @@ export const Footer = (props: footerProps): React.JSX.Element => {
             >
               Navigation
             </Typography>
-            item1
+            <MenuItem
+              sx={{
+                justifyContent: 'center'
+              }}
+              component={'a'}
+              href={'about'}
+            >
+              <Typography
+                variant={'body2'}
+              >
+                ABOUT
+              </Typography>
+            </MenuItem>
+            <MenuItem
+              sx={{
+                justifyContent: 'center'
+              }}
+              component={'a'}
+              href={'gallery'}
+            >
+              <Typography
+                variant={'body2'}
+              >
+                GALLERY
+              </Typography>
+            </MenuItem>
+            <MenuItem
+              sx={{
+                justifyContent: 'center'
+              }}
+              component={'a'}
+              href={'contact'}
+            >
+              <Typography
+                variant={'body2'}
+              >
+                CONTACT
+              </Typography>
+            </MenuItem>
           </Grid>
           <Grid
             item
@@ -114,6 +155,7 @@ export const Footer = (props: footerProps): React.JSX.Element => {
             item
             xs={12}
             md={3}
+            gap={2}
           >
             <Typography
               fontWeight={theme.typography.fontWeightMedium}
@@ -123,7 +165,21 @@ export const Footer = (props: footerProps): React.JSX.Element => {
             >
               Socials
             </Typography>
-            item1
+            <Link
+              href={'https://facebook.com'}
+            >
+              <SvgFb/>
+            </Link>
+            <Link
+              href={'https://facebook.com'}
+            >
+              <SvgIn/>
+            </Link>
+            <Link
+              href={'https://facebook.com'}
+            >
+              <SvgX/>
+            </Link>
           </Grid>
         </Grid>
       </Container>
