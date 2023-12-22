@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import theme from '../ThemeRegistry/theme'
 
-const pages = ['Products', 'Pricing', 'Blog']
+const pages = ['About', 'Gallery', 'Contact']
 
 function ResponsiveAppBar (): React.JSX.Element {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
