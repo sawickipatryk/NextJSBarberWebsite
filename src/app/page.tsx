@@ -6,6 +6,7 @@ import OpeningOurs from '@/components/OpeningOurs'
 import PriceList from '@/components/PriceList'
 import OurServices from '@/components/OurServices'
 import Photos from '@/components/Photos'
+import theme from '@/components/ThemeRegistry/theme'
 
 export const Home = (): React.JSX.Element => {
   return (
@@ -28,6 +29,20 @@ export const Home = (): React.JSX.Element => {
           height: '100%',
           background:
           'linear-gradient(0deg, #2C3639 0%, rgba(1, 1, 1, 0.4) 100%);'
+        }}
+        sxH1={{
+          [theme.breakpoints.up('md')]: {
+            marginBottom: '20px'
+          },
+          marginBottom: '20px'
+        }}
+        sxText={{
+          [theme.breakpoints.up('md')]: {
+            width: '500px',
+            marginBottom: '20px'
+          },
+          width: 'auto',
+          marginBottom: '20px'
         }}
         header={'We Will Create Your Best Image'}
         text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur natus eveniet nulla repellendus quidem quisquam recusandae sint deserunt incidunt voluptatum.'}

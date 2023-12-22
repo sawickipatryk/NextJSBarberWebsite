@@ -22,6 +22,15 @@ const roboto = Roboto({
 })
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536
+    }
+  },
   palette: {
     mode: 'light',
     common: {
@@ -68,7 +77,8 @@ const theme = createTheme({
       fontSize: '20px'
     },
     body1: {
-      fontSize: '18px'
+      fontSize: '18px',
+      letterSpacing: '0.3px'
     },
     body2: {
       fontSize: '17px'
