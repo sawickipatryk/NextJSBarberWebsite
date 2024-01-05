@@ -1,7 +1,7 @@
-# React Pizza Page
+# Nextjs Barber Page
 
 ## General info
-This project is restuarant page.
+This project is barber page.
 	
 ## Technologies
 Project is created with:
