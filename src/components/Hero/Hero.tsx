@@ -5,10 +5,10 @@ import { Box, Typography, Button, Container } from '@mui/material'
 import theme from '../ThemeRegistry/theme'
 
 interface heroProps {
-  sx?: object
-  sxGradient?: object
-  sxH1?: object
-  sxText?: object
+  sx?: Record<string, unknown>
+  sxGradient?: Record<string, unknown>
+  sxH1?: Record<string, unknown>
+  sxText?: Record<string, unknown>
   header?: string
   text?: string
   buttonText?: string

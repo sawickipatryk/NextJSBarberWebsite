@@ -18,6 +18,7 @@ export const About = (): React.JSX.Element => {
           alignItems: 'center',
           justifyContent: 'center'
         }}
+
         sxGradient={{
           top: 0,
           left: 0,
